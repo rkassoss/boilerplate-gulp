@@ -1,0 +1,163 @@
+.float-label-control { position: relative; margin-bottom: 1.5em; padding-top: 1rem; }
+.float-label-control ::-webkit-input-placeholder { color: #888; }
+.float-label-control :-moz-placeholder { color:  #888; }
+.float-label-control ::-moz-placeholder { color:   #888; }
+.float-label-control :-ms-input-placeholder { color:  #888; }
+.float-label-control input:-webkit-autofill,
+.float-label-control textarea:-webkit-autofill { background-color: transparent !important; -webkit-box-shadow: 0 0 0 1000px white inset !important; -moz-box-shadow: 0 0 0 1000px white inset !important; box-shadow: 0 0 0 1000px white inset !important; }
+.float-label-control input, .float-label-control textarea, .float-label-control label { font-size: 1em; box-shadow: none; -webkit-box-shadow: none; }
+.float-label-control input:focus,
+.float-label-control textarea:focus { box-shadow: none; -webkit-box-shadow: none; border-bottom-width: 2px; padding-bottom: 0; border-color: $turquoise; }
+.float-label-control textarea:focus { padding-bottom: 4px; }
+.float-label-control input, .float-label-control textarea { 
+	margin-top: 2rem;
+	display: block; width: 100%; padding: 0.1em 0em 1px 0em; 
+	border: none; border-radius: 0px; border-bottom: 1px solid #aaa; 
+	outline: none; margin: 0px; background: none; 
+}
+.float-label-control textarea { padding: 0.1em 0em 5px 0em; }
+.float-label-control label { position: absolute; font-weight: normal; top: -.5rem; left: 0.08em; color: #aaa; z-index: -1; font-size: 0.75em; -moz-animation: float-labels 300ms none ease-out; -webkit-animation: float-labels 300ms none ease-out; -o-animation: float-labels 300ms none ease-out; -ms-animation: float-labels 300ms none ease-out; -khtml-animation: float-labels 300ms none ease-out; animation: float-labels 300ms none ease-out; /* There is a bug sometimes pausing the animation. This avoids that.*/ animation-play-state: running !important; -webkit-animation-play-state: running !important; }
+.float-label-control input.empty + label,
+.float-label-control textarea.empty + label { top: 0.1em; font-size: 1em; animation: none; -webkit-animation: none; }
+.float-label-control input:not(.empty) + label,
+.float-label-control textarea:not(.empty) + label { z-index: 1; }
+.float-label-control input:not(.empty):focus + label,
+.float-label-control textarea:not(.empty):focus + label { color: $turquoise; }
+.float-label-control.label-bottom label { -moz-animation: float-labels-bottom 300ms none ease-out; -webkit-animation: float-labels-bottom 300ms none ease-out; -o-animation: float-labels-bottom 300ms none ease-out; -ms-animation: float-labels-bottom 300ms none ease-out; -khtml-animation: float-labels-bottom 300ms none ease-out; animation: float-labels-bottom 300ms none ease-out; }
+.float-label-control.label-bottom input:not(.empty) + label,
+.float-label-control.label-bottom textarea:not(.empty) + label { top: 3em; }
+
+
+
+.typeset .main-content .form-wrap {
+	@include border-radius(6px); margin: 1rem 0 3rem;
+	.btn-primary {
+		margin: 2rem 0 1rem;
+	}
+	h2 {
+		font-size: 1.5rem; @include textHeavy; color: $deepBlue; margin-bottom: 0;
+		display: inline-block; padding: 0;
+	}
+	.select2 .select2-selection {
+		border: 1px solid #aaa;
+	}
+	.select2-container--bootstrap .select2-dropdown {
+		border: 1px solid #aaa;
+	}
+	.select2 .select2-selection .select2-selection__rendered {
+		color: #c5c5c5; font-size: 1.2rem;
+	}
+}
+.form-section {
+	background-color: white;
+	h3 {
+		font-size: .9rem; text-transform: uppercase;
+		padding: 0; margin: 0;
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+	.input-group-addon {
+		background-color: transparent; border: 0; border-bottom: 1px solid #aaa;
+		@include border-radius(0);
+	}
+}
+
+.cardInfo {
+	.card {
+		position: absolute;
+		display: block;
+		right: 0.375em;
+		top: 50%;
+		margin-top: -10px;
+		width: 28px;
+		height: 19px;
+		background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/card.svg') center center;
+		background-size: 100%;
+	}
+	
+	.cc-num.visa + .card {
+		background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/visa.png') no-repeat center center;
+	}
+	
+	.cc-num.amex + .card {
+		background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/amex.png') no-repeat center center;
+	}
+	
+	.cc-num.mastercard + .card {
+		background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/mastercard.png') no-repeat center center;
+	}
+	
+	.cc-num.diners + .card {
+		background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/diners.png') no-repeat center center;
+	}
+	
+	.cc-num.discover + .card {
+		background: url('https://d2fz1tzabfzgo4.cloudfront.net/demos/cards/discover.png') no-repeat center center;
+	}
+	
+	input[type="text"],
+	input[type="tel"] {
+		&.identified {
+			border-color: $turquoise; background-color: rgba($turquoise,.2);
+		}
+		&.unknown {
+			border-color: red; background-color: rgba(red,.2);
+		}
+	}
+	
+	input[type="text"]:focus,
+	input[type="tel"]:focus {
+		&.identified {
+			border-color: $turquoise; background-color: rgba($turquoise,.2);
+		}
+		&.unknown {
+			border-color: red; background-color: rgba(red,.2);
+		}
+	}
+	
+	.cancel-link {
+		font-size: 0.875em;
+		float: right;
+		color: #bbb;
+		padding-top: 0.375em;
+		text-decoration: none;
+	}
+	.cc-num__wrap {
+		position: relative;
+	}
+}
+
+
+
+@keyframes float-labels {
+    0% { opacity: 1; color: #aaa; top: 0.1em; font-size: 1em; }
+    20% { font-size: 1em; opacity: 0; }
+    30% { top: 0.1em; }
+    50% { opacity: 0; font-size: 0.65em; }
+    100% { top: -.5rem; opacity: 1; }
+}
+
+@-webkit-keyframes float-labels {
+    0% { opacity: 1; color: #aaa; top: 0.1em; font-size: 1em; }
+    20% { font-size: 1em; opacity: 0; }
+    30% { top: 0.1em; }
+    50% { opacity: 0; font-size: 0.65em; }
+    100% { top: -.5rem; opacity: 1; }
+}
+
+@keyframes float-labels-bottom {
+    0% { opacity: 1; color: #aaa; top: 0.1em; font-size: 1em; }
+    20% { font-size: 1em; opacity: 0; }
+    30% { top: 0.1em; }
+    50% { opacity: 0; font-size: 0.65em; }
+    100% { top: -.5rem; opacity: 1; }
+}
+
+@-webkit-keyframes float-labels-bottom {
+    0% { opacity: 1; color: #aaa; top: 0.1em; font-size: 1em; }
+    20% { font-size: 1em; opacity: 0; }
+    30% { top: 0.1em; }
+    50% { opacity: 0; font-size: 0.65em; }
+    100% { top: -.5rem; opacity: 1; }
+}
