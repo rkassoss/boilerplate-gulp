@@ -1,5 +1,5 @@
-# Gulp Starter for CSS Tricks Tutorial  
+# Gulp - Boilerplate Starter  
 
-This repo is a gulp starter for this CSS Tricks tutorial. 
+This repo is a gulp starter on a HTML5 Boilerplate landing page.
 
-Remember to do run the `npm install` command after cloning this repo :) 
+Run the `npm install` command after cloning this repo :) 
